@@ -33,10 +33,9 @@ const setHour = () => {
   let hour = today.getHours();
   let minutes = today.getMinutes();
   let suffixHour = "AM";
-  if (hour > 12) {
-    hour = hour - 12;
-    suffixHour = "PM";
-  }
+  if (hour > 12) hour = hour - 12;
+  if (hour >= 12) suffixHour = "PM";
+
   if (minutes < 10) minutes = "0" + `${minutes}`;
   d.getElementById(
     `${preffixName}__hour`

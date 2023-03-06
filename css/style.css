@@ -6,8 +6,21 @@
 
 :root {
   --accent-color: crimson;
+  
+}
+
+[data-theme="dark"] {
+  --bg-color: #202124;
+  --text-color: #eee;
+  --contrast-color: #3b3641;
+  --shadow-color: 255, 255, 255;
+}
+
+[data-theme="light"] {
+  --background-color: #eee;
+  --text-color: #111;
   --contrast-color: #eee;
-  --bg-color: #ddd;
+  --shadow-color: 0, 0, 0;
 }
 
 body {
@@ -26,11 +39,29 @@ header {
   background-color: var(--accent-color);
   color: var(--contrast-color);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
 }
 
 header h1 {
   text-align: center;
   padding: 0.5rem;
+  flex: 1 0 85%;
+}
+
+header .theme-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header .theme-button span {
+  font-size: 2rem;
+  padding: 0.3rem;
+  transition: all .5s ease;
+}
+
+header .theme-button span:hover {
+  cursor: pointer;
 }
 
 .mobile-menu {

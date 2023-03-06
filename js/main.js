@@ -1,5 +1,9 @@
 console.log("main.js works!!!");
 
-import timeCard from "./time.js";
+import timeCard from "./timeCard.js";
+import theme from "./theme.js";
 
-timeCard("#time-section");
+document.addEventListener("DOMContentLoaded", () => {
+  theme(".theme-button");
+  timeCard("#time-section");
+});
